@@ -24,7 +24,6 @@ class App {
 
     await this._subscribeToPushNotification();
 
-    this._initMobileNav();
     this._checkAuthStatus();
     
     // Call _handleRoute after initialization
@@ -92,34 +91,6 @@ class App {
     } catch (error) {
       console.error('Failed to initialize IndexedDB:', error);
     }
-  }
-
-  _initMobileNav() {
-    const menuButton = document.getElementById('menu');
-    const drawer = document.getElementById('drawer');
-
-    if (!menuButton || !drawer) {
-      console.error('Menu button or drawer not found');
-      return;
-    }
-
-    menuButton.addEventListener('click', (event) => {
-      event.stopPropagation();
-      drawer.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (event) => {
-      if (drawer.classList.contains('open') && !drawer.contains(event.target)) {
-        drawer.classList.remove('open');
-      }
-    });
-
-    const navLinks = document.querySelectorAll('.nav-item a');
-    navLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        drawer.classList.remove('open');
-      });
-    });
   }
 
   _checkAuthStatus() {

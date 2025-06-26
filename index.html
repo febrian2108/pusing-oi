@@ -92,30 +92,7 @@
         window.addEventListener("offline", () => {
             document.getElementById("offline-indicator").classList.add("show");
         });
-
-        let deferredPrompt;
-        window.addEventListener("beforeinstallprompt", (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            document.getElementById("pwa-install-banner").classList.add("show");
-        });
-
-        document.getElementById("install-pwa").addEventListener("click", () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then(() => {
-                    deferredPrompt = null;
-                });
-                document
-                    .getElementById("pwa-install-banner")
-                    .classList.remove("show");
-            }
-        });
-
-        document.getElementById("close-banner").addEventListener("click", () => {
-            document.getElementById("pwa-install-banner").classList.remove("show");
-        });
-
+        
         if (!navigator.onLine) {
             document.getElementById("offline-indicator").classList.add("show");
         }

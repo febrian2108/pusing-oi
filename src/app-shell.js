@@ -3,6 +3,7 @@ import { NetworkStatus } from './utils/network-status';
 
 class AppShell {
   static init() {
+    NetworkStatus.init();
     this._renderAppShell();
     this._setupEventListeners();
     this._updateNavbarVisibility();

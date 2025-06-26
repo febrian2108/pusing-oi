@@ -22,22 +22,24 @@ class HomePage {
             <div class="hero-text">
               <h1 class="hero-title">Bagikan Ceritamu</h1>
               <p class="hero-description">
-                Bergabunglah dengan komunitas Dicoding dan bagikan pengalaman menarik 
-                Anda. Temukan inspirasi dari cerita-cerita luar biasa dari seluruh Indonesia.
+              Bergabunglah dengan komunitas Dicoding dan bagikan pengalaman menarik 
+              Anda. Temukan inspirasi dari cerita-cerita luar biasa dari seluruh Indonesia.
               </p>
+              <br>
               <div class="hero-actions">
-                <a href="#/add" class="btn btn-primary hero-btn">
-                  <i class="fas fa-plus"></i>
-                  <span>Tambah Cerita</span>
-                </a>
-                <a href="#/map" class="btn btn-secondary hero-btn">
-                  <i class="fas fa-map-marked-alt"></i>
-                  <span>Jelajahi Peta</span>
-                </a>
+              <a href="#/add" class="btn btn-primary hero-btn">
+              <i class="fas fa-plus"></i>
+              <span>Tambah Cerita</span>
+              </a>
+              <a href="#/map" class="btn btn-secondary hero-btn">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Jelajahi Peta</span>
+              </a>
               </div>
-            </div>
-          </div>
-        </div>
+              </div>
+              </div>
+              </div>
+              <br>
 
         <div class="coordinator-layout">
           <div class="coordinator-header">
@@ -45,11 +47,13 @@ class HomePage {
               <h2 class="coordinator-title">Cerita Terbaru</h2>
               <p>Jelajahi dan bagikan cerita menarik dari komunitas Dicoding</p>
             </div>
+            <br>
             <button id="toggle-favorites" class="btn btn-outline">
               <i class="fas fa-heart"></i>
               <span>Cerita Favorit</span>
             </button>
           </div>
+          <br>
           <div id="stories-container" class="coordinator-grid">
             <div class="loader" id="stories-loader"></div>
           </div>
@@ -199,14 +203,14 @@ class HomePage {
 
       storyItemElement.querySelector('.favorite-btn').addEventListener('click', async (e) => {
         e.preventDefault();
-        
+
         const favoriteBtn = e.currentTarget;
         const icon = favoriteBtn.querySelector('i');
-        
+
         // Add loading state
         favoriteBtn.classList.add('loading');
         favoriteBtn.disabled = true;
-        
+
         try {
           const isFav = await IdbHelper.isFavorite(story.id);
 
@@ -220,7 +224,7 @@ class HomePage {
             favoriteBtn.classList.add('favorited', 'success');
             icon.classList.replace('fa-regular', 'fa-solid');
             favoriteBtn.setAttribute('data-tooltip', 'Klik untuk menghapus dari favorit');
-            
+
             // Remove success class after animation
             setTimeout(() => {
               favoriteBtn.classList.remove('success');

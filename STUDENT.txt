@@ -1,2 +1,2 @@
-APP_URL=https://story-apps-susah.netlify.app/
+APP_URL=https://storyaps.netlify.app/
 MAP_SERVICE_API_KEY=<not_required>

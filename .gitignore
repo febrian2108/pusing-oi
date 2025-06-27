@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 last.zip
 *.local
+dist
 
 project.zip
 # Editor directories and files

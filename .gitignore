@@ -15,6 +15,7 @@ project.zip
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+test-projectaja.zip
 .idea
 .DS_Store
 *.suo

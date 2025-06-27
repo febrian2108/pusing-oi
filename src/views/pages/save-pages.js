@@ -15,10 +15,12 @@ class FavoritesPage {
               <h2 class="coordinator-title">Cerita Favorit</h2>
               <p>Kumpulan cerita yang Anda tandai sebagai favorit</p>
             </div>
+            <br>
             <a href="#/" class="btn btn-secondary">
               <i class="fas fa-arrow-left"></i> Kembali ke Beranda
             </a>
           </div>
+          <br>
           
           <div id="favorites-container" class="coordinator-grid">
             <div class="loader" id="favorites-loader"></div>

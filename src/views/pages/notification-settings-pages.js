@@ -24,11 +24,13 @@ class NotificationSettingsPage {
                             <h3>Push Notifications</h3>
                             <p>Terima notifikasi real-time tentang cerita baru dan pembaruan aplikasi</p>
                         </div>
+                        <br>
                         
                         <div class="notification-status" id="notification-status">
                             <span class="status-loading">Memeriksa status...</span>
                         </div>
                         
+                        <br>
                         <div class="notification-actions">
                             <button id="enable-notifications" class="btn btn-primary">
                                 <i class="fas fa-bell"></i>
@@ -39,15 +41,13 @@ class NotificationSettingsPage {
                                 <span>Nonaktifkan Notifikasi</span>
                             </button>
                             <button id="test-notification" class="btn btn-outline">
-                                <i class="fas fa-test-tube"></i>
+                                <i class="fas fa-bell"></i>
                                 <span>Test Notifikasi</span>
                             </button>
-                            <button id="test-push" class="btn btn-outline">
-                                <i class="fas fa-rocket"></i>
-                                <span>Test Push</span>
-                            </button>
+                            
                         </div>
                     </div>
+                    <br>
 
                     <div class="notification-help">
                         <h4>Bantuan Notifikasi</h4>

@@ -14,7 +14,7 @@ class PwaInstaller {
       const installButton = document.getElementById('install-pwa');
       const closeBannerButton = document.getElementById('close-banner');
       if (installButton) { 
-        installButton.addEventListener('click', function () { window.location.href = 'https://storyaps.netlify.app/'; });
+        installButton.addEventListener('click', function () { window.location.href = 'https://story-appsss.netlify.app/'; });
     }
       if (closeBannerButton) {
         closeBannerButton.addEventListener('click', () => {
